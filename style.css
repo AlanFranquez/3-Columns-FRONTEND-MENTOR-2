@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500&family=Lexend+Deca:wght@100&family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --azul: #016972;
+  --azul-oscuro: #00403f;
+  --amarillo: #e28525;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  height: 500px;
+  width: 1200px;
+  margin: 0 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 10px;
+}
+
+.container__columna-1 {
+  background-color: var(--amarillo);
+  border-radius: 14px 0px 0px 14px;
+}
+
+.container__columna-2 {
+  background-color: var(--azul);
+}
+
+.container__columna-3 {
+  background-color: var(--azul-oscuro);
+  border-radius: 0px 14px 14px 0px;
+}
+
+.container__columna-1,
+.container__columna-2,
+.container__columna-3 {
+  padding: 70px;
+}
+
+button {
+  padding: 17px 35px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 50%;
+  font-weight: 700;
+}
+
+.container__columna-1 button {
+  color: var(--amarillo);
+}
+.container__columna-2 button {
+  color: var(--azul);
+}
+
+.container__columna-3 button {
+  color: var(--azul-oscuro);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  .container__columna-1 {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .container__columna-3 {
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 10%;
+  }
+}
